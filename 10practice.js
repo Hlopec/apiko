@@ -29,7 +29,7 @@ function calculateSumOfArray() {
     }
     console.log("Final = " + result);
    }
-    
+
    calculateSumOfArray();
 
 // Task #3
@@ -38,22 +38,22 @@ function printSeasonByMonth(month) {
     var transfrmedMonthName = month.toLowerCase()
     switch (transfrmedMonthName) {
         case 'december':
-        case 'january':      
+        case 'january':
         case 'february':
           console.log( 'Winter' );
           break;
         case 'march':
-        case 'april':      
+        case 'april':
         case 'may':
           console.log( 'Spring' );
           break;
         case 'june':
-        case 'july':      
+        case 'july':
         case 'august':
           console.log( 'Summer' );
           break;
         case 'september':
-        case 'october':      
+        case 'october':
         case 'november':
           console.log( 'Outhum' );
           break;
@@ -61,7 +61,7 @@ function printSeasonByMonth(month) {
           console.log( 'SOMETHING WRONG' );
       }
 }
-    
+
    printSeasonByMonth("SEPTEMBER");
    printSeasonByMonth("NOVEMBER");
    printSeasonByMonth("JULY");
@@ -69,8 +69,9 @@ function printSeasonByMonth(month) {
 
    // Task #4
    function calculateWordsInString(string) {
-    console.log(string);
-   }
+     string = string.replace(/ +(?= )/g,'');
+     return string.split(' ').length;
+    }
    calculateWordsInString("Easy string for count");
    calculateWordsInString("Easy");
    calculateWordsInString("Some string with a triple   space");
